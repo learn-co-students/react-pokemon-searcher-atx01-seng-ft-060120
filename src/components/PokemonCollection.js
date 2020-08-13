@@ -6,8 +6,11 @@ class PokemonCollection extends React.Component {
   render() {
     return (
       <Card.Group itemsPerRow={6}>
-        <h1>Hello From Pokemon Collection</h1>
-      </Card.Group>
+        {this.props.pokemon.map((poke) => (
+          <PokemonCard poke={poke} key={poke.id} />
+          ))} 
+          </Card.Group>
+       
     )
   }
 }
